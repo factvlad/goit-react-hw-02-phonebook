@@ -18,4 +18,5 @@ export default Filter;
 
 Filter.propTypes = {
   searchName: PropTypes.func.isRequired,
+  value: PropTypes.string
 }
