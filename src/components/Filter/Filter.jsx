@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import s from "../Contacts.module.scss"
 
-function Filter({ searchName }) {
+function Filter({ searchName, value }) {
   return (
     <input
       type="text"
       className={ s.input }
       name="filter"
+      value={ value }
       placeholder="Serch Contacts"
       onChange={ searchName }
     />

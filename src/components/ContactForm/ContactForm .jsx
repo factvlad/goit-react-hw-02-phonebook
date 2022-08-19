@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import s from "../Contacts.module.scss"
+import { nanoid } from "nanoid"
 import React, { Component } from 'react'
 
 
@@ -18,15 +19,19 @@ class ContactForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    const { onSubmit } = this.props
-    onSubmit({ ...this.state })
+    const { name, number } = this.state;
+    this.props.onSubmit({
+      name,
+      number,
+      id: nanoid(),
+    });
     this.reset()
   }
 
-  reset = () => {
+  reset() {
     this.setState({
-      contact: '',
-      phone: '',
+      name: '',
+      number: '',
     });
   };
 

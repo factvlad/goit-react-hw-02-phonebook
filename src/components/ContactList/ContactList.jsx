@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import s from "../Contacts.module.scss"
 
-const Contacts = ({ contacts, removeContacts }) => {
+const ContactList = ({ contacts, removeContacts }) => {
   const contactsList = contacts.map(({ id, name, number }) => (
     <li className={ s.contacts } key={ id }>{ name } : { number }
       <span
@@ -25,9 +25,9 @@ const Contacts = ({ contacts, removeContacts }) => {
 }
 
 
-export default Contacts;
+export default ContactList;
 
-Contacts.propTypes = {
+ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
