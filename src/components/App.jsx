@@ -31,6 +31,7 @@ export class App extends Component {
   };
 
   removeContacts = (id) => {
+    Notiflix.Notify.failure('You delete the contact')
     this.setState(({ contacts }) => {
       const newBooks = contacts.filter(item => item.id !== id);
       return {
