@@ -56,7 +56,7 @@ class ContactForm extends Component {
           />
           <input
             value={ number }
-            onChange={ this.handleChange }
+            onChange={ handleChange }
             placeholder="459-12-56"
             type="tel"
             name="number"
