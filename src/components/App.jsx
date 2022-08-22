@@ -14,7 +14,7 @@ export class App extends Component {
     filter: '',
   };
 
-  submitDataForm = data => {
+  submitDataForm = (data) => {
     const { contacts } = this.state;
     if (contacts.find(el => el.name === data.name)) {
       Notiflix.Report.warning(
@@ -40,7 +40,7 @@ export class App extends Component {
     })
   }
 
-  searchName = e => {
+  searchName = (e) => {
     this.setState({ filter: e.target.value.toLowerCase() });
   };
 
